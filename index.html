@@ -15,7 +15,7 @@
   <header>
     <img 
     class="logo"  
-    src="logo.png" alt="Imagem de DOE">
+    src="/logo.png" alt="Imagem de DOE">
 
     <h2>A sua doação importa.</h2> <!--Texto-->
     <p>Até 3 vidas com 1 doação.</p> <!--Parágrafo-->
@@ -28,7 +28,7 @@
   <!--Input-->
   <section class="form hide">
     <h2>Entre na lista de doadores</h2>
-    <form action="/">
+    <form action="/" method="POST">
       <input 
         type="text" 
         name="name"
@@ -52,28 +52,20 @@
     <h2>Últimos <span>doadores</span></h2>
 
     <section class="donors"> <!--Sessão-->
-      <div class="donor"> <!--Container (agrupamento)-->
-        <div class="blood">AB+</div>
-        <p>Thiago Alves</p>
-      </div>
-      <div class="donor"> <!--Container (agrupamento)-->
-        <div class="blood">B+</div>
-        <p>Diego Fernandes</p>
-      </div>
-      <div class="donor"> <!--Container (agrupamento)-->
-        <div class="blood">A+</div>
-        <p>Cleiton Souza</p>
-      </div>
-      <div class="donor"> <!--Container (agrupamento)-->
-        <div class="blood">O+</div>
-        <p>Mayk Brito</p>
-      </div>
+
+      {% for donor in donors %} <!--Estrutura de repetição-->
+        <div class="donor"> <!--Container (agrupamento)-->
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+      {%endfor%}
+
     </section>
   </main>
 
   <footer>Com 💜 Rocketseat.</footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 
 </body>
 
