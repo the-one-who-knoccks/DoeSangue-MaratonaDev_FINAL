@@ -1,4 +1,4 @@
-# DOE - Sistema de doação de sangue. 
+# DOE - Sistema de cadastro de doadores de sangue. 
 
 Aplicação web desenvolvida na Maratona Dev da rocketseat.
 
